@@ -20,6 +20,7 @@ public class CompanyServiceImpl implements CompanyService {
 		List<Company> ls=null;
 		try {
 			ls=companyDao.findAll();
+		
 		} catch (Exception e) {
 			// TODO: handle exception
 		}

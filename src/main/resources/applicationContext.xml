@@ -12,7 +12,6 @@
 	http://www.springframework.org/schema/aop/spring-aop.xsd
 	http://www.springframework.org/schema/tx
 	http://www.springframework.org/schema/tx/spring-tx.xsd
-	http://directwebremoting.org/schema/spring-dwr/spring-dwr-3.0.xsd
 	">
 
     <!--开启注解的扫描，希望处理service和dao，controller不需要Spring框架去处理-->
@@ -25,9 +24,9 @@
     <!--配置连接池-->
     
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
-        <property name="driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
-        <property name="url" value="jdbc:sqlserver://127.0.0.1:1433; DatabaseName=tsbio"/>
-		<property name="username" value="tsbio"/>
+        <property name="driverClass" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+        <property name="jdbcUrl" value="jdbc:sqlserver://127.0.0.1:1433; DatabaseName=tsbio"/>
+		<property name="user" value="tsbio"/>
 		<property name="password" value="ts@801"/>
     </bean>
 
